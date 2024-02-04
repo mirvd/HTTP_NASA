@@ -26,7 +26,7 @@ public class Main {
                 .build();
         HttpGet request = new HttpGet(REMOTE_SERVICE_URI);
         CloseableHttpResponse response = httpClient.execute(request);
-        Nasa nasa = mapper.readValue(response.getEntity().getContent(), Nasa.class);
+        NasaObject nasa = mapper.readValue(response.getEntity().getContent(), NasaObject.class);
         System.out.println(nasa);
         HttpGet request2 = new HttpGet(nasa.getUrl());
         CloseableHttpResponse response2 = httpClient.execute(request2);

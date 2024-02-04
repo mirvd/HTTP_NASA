@@ -2,7 +2,7 @@ package ru.netology;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Nasa {
+public class NasaObject {
     private final String copyright;
     private final String date;
     private final String explanation;
@@ -12,7 +12,7 @@ public class Nasa {
     private final String title;
     private final String url;
 
-    public Nasa(
+    public NasaObject(
             @JsonProperty("copyright") String copyright,
             @JsonProperty("date") String date,
             @JsonProperty("explanation") String explanation,
